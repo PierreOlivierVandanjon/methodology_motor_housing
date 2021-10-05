@@ -39,7 +39,7 @@ Il y a 3 modalités pour l'age de la personne de référence , 4 modalités pour
 M_a=c('moins_de_30ans', '30-60ans','plus_de_60ans') # Modalite age
 M_t=c('1', '2','3','4_et_plus') # Modalite taille
 M_m=c('yes','no') # Modalité motorisé ou pas 
-C=expand.grid(a=M_a,t=M_t,m=M_m,p=0) # tableau de contingence %>% 
+C=expand.grid(a=M_a,t=M_t,m=M_m,p=0) # tableau de contingence
 n=400 # N doit être divisible par 200
 print(C)
 ```
@@ -64,7 +64,7 @@ Cette propriété de base varie selon la taille des ménage selon les régles su
 
 
 ```{r}
-pa1=0.2 # proportion de personnes ayant l'age 1, on ne se sert pas ce cette avrailbe
+pa1=0.2 # proportion de personnes ayant l'age 1, on ne se sert pas ce cette variable
 
 C[C$a==M_a[1] & C$t==M_t[1] & C$m==M_m[1],]$p=0.2*0.4*0.1
 C[C$a==M_a[1] & C$t==M_t[1] & C$m==M_m[2],]$p=0.2*0.4*0.9
@@ -97,8 +97,9 @@ C[C$a==M_a[2] & C$t==M_t[3] & C$m==M_m[2],]$p=0.2*0.2*0.5
 C[C$a==M_a[2] & C$t==M_t[4] & C$m==M_m[1],]$p=0.2*0.1*0.6
 C[C$a==M_a[2] & C$t==M_t[4] & C$m==M_m[2],]$p=0.2*0.1*0.4
 print(C)
+```
 
-############## ARRET LE 4 OCTOBRE 2021 #################
+
 
 pa2=0.7 # proportion de personnes ayant l'age 2
 ra2=15000
